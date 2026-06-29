@@ -1,0 +1,58 @@
+# =============================================================
+#  Quartus Prime / Nios V project .gitignore
+#  Tracks sources: *.qpf *.qsf *.qsys *.v *.sv *.sdc *.c *.h
+#                  SETUP.md, board manuals
+#  Ignores everything regenerable (see SETUP.md to rebuild).
+# =============================================================
+
+# ── Quartus Prime compilation output ──
+/db/
+/incremental_db/
+/output_files/
+/.qsys_edit/
+/greybox_tmp/
+*.qws
+*.rpt
+*.summary
+*.smsg
+*.sms
+*.jdi
+*.pin
+*.done
+*.sof
+*.pof
+*.rbf
+*.jam
+*.jbc
+*.sld
+*.qarlog
+*.bak
+*.orig
+c5_pin_model_dump.txt
+PLLJ_PLLSPE_INFO.txt
+
+# ── Platform Designer (regenerated from niosv_system.qsys) ──
+/niosv_system/
+/simulation/
+*.sopcinfo
+
+# ── Debug / GDB / OpenOCD generated configs ──
+gdbopxdriscv.ini
+*.cdf
+
+# ── Nios V software ──
+# Generated BSP (regenerate: niosv-bsp --create ...)
+/software/bsp/
+# CMake build output (regenerate: cmake -S software/app -B .../build)
+/software/app/build/
+*.elf
+*.objdump
+*.map
+*.hex
+
+# ── Editor / OS noise ──
+*.swp
+*~
+.vscode/
+.DS_Store
+Thumbs.db
